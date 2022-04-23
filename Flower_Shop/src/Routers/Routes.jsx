@@ -8,6 +8,9 @@ import { SignInSide } from "../Components/sign-in/Login";
 import { SignUpSide } from "../Components/sign-up/SignUp";
 import { Potted_Plants } from "../Components/Potted_Plants/Potted_Plants";
 import Forgotpass from "../Components/sign-in/Forgotpass";
+import { PaymentPage } from "../Components/Payment/PaymentPage";
+import { CardPayment } from "../Components/Payment/CardPayment";
+import { ProductDetails } from "../Components/ProductDetails/ProductDetails";
 
 export const AllRoutes = () => {
     return (
@@ -21,6 +24,9 @@ export const AllRoutes = () => {
           <Route path="/signin" element={<SignInSide />} />
           <Route path="/forgotpass" element={<Forgotpass />} />
           <Route path="/potted-plant" element={<Potted_Plants/>} />
+          <Route path="/payment" element={<PaymentPage/>} />
+          <Route path="/card-payment" element={<CardPayment/>} />
+          <Route path="/product-details" element={<ProductDetails/>} />
         </Routes>
         <Footer />
       </>

@@ -8,8 +8,8 @@ import FormGroup from "@mui/material/FormGroup";
 import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
-
-import Calendar from "react-calendar";
+// import KeyboardDatePickerExample from './Calendar';
+// import Calendar from "react-calendar";
 
 export const ProductDetails = () => {
   const [value, setValue] = React.useState("female");
@@ -62,7 +62,7 @@ export const ProductDetails = () => {
                 style={{ marginDown: "5%" }}
               />
               <h4>Delivery Date</h4>
-              <Calendar />
+              {/* <KeyboardDatePickerExample/> */}
               <h5>Use Address Book</h5>
               <Stack direction="row" spacing={2}>
                 <Button variant="contained">Add To Cart</Button>
@@ -77,5 +77,33 @@ export const ProductDetails = () => {
 
 /*
 
+import React, { Fragment, useState } from "react";
+import { KeyboardDatePicker } from "@material-ui/pickers";
+
+function KeyboardDatePickerExample(props) {
+  const [selectedDate, handleDateChange] = useState(new Date());
+
+  return (
+    <Fragment>
+      <KeyboardDatePicker
+        clearable
+        value={selectedDate}
+        placeholder="10/10/2018"
+        onChange={date => handleDateChange(date)}
+        minDate={new Date()}
+        format="MM/dd/yyyy"
+      />
+
+      <KeyboardDatePicker
+        placeholder="2018/10/10"
+        value={selectedDate}
+        onChange={date => handleDateChange(date)}
+        format="yyyy/MM/dd"
+      />
+    </Fragment>
+  );
+}
+
+export default KeyboardDatePickerExample;
 
 */
