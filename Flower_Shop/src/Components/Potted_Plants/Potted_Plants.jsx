@@ -45,13 +45,15 @@ export const Potted_Plants = () => {
           <hr />
         </div>
         <div className="potted_Plants_second">
-          {pot.map((el) => (
-            <div className="prductDetail_potted_Plants">
-              <img src={el.image}></img>
-              <h3>{el.name}</h3>
-              <p>{el.price}</p>
-            </div>
-          ))}
+          <div className="ptterd_plants">
+            {pot.map((el) => (
+              <div className="prductDetail_potted_Plants">
+                <img src={el.image}></img>
+                <h3>{el.name}</h3>
+                <p>{el.price}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );
