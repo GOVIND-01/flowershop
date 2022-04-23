@@ -14,7 +14,7 @@ export function Chat(props) {
 
     return (
         <div>
-            <h1>Welcome To Our Chat Bot</h1>
+         <h1>...</h1>
         </div>
     );
 }

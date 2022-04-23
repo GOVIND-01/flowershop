@@ -1,5 +1,5 @@
 import axios from "axios"
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 export const HomePage = () => {
@@ -7,7 +7,7 @@ export const HomePage = () => {
     
     useEffect(() => {
         fetchHomedata();
-    }, [])
+    },[])
     
     let home_url = "https://storeflowersunil.herokuapp.com/flower/homepage";
     const fetchHomedata = () => {
@@ -24,7 +24,7 @@ export const HomePage = () => {
           <div className="flower_home_slider"></div>
           <div className="flower_home_about">
             <div className="flower_home_corprate_service">
-              <Link to="/corprate-service">
+              <Link to="/potted-plant">
                 <img
                   src="https://assets.stage.eflorist.com//site/EF-77/Homepage/m7790008-smallOccTile01.jpg"
                   alt=""
@@ -53,9 +53,9 @@ export const HomePage = () => {
           <div className="flower_div">
             {home.map((el) => (
               <div className="flower_div_first">
-                <img src="">{el.image}</img>
-                <h3>{ el.name}</h3>
-                <p>{ el.price}</p>
+                <img src={el.image}></img>
+                <h3>{el.name}</h3>
+                <p>{el.price}</p>
               </div>
             ))}
           </div>

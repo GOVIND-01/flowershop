@@ -38,9 +38,9 @@ export const ProductPage = () => {
         <div className="ProductPage_second">
           {home.map((el) => (
             <div className="prductDetail_productPage">
-                  <img src="">{el.image}</img>
-                  <h3>{ el.name}</h3>
-                  <p>{ el.price}</p>
+              <img src={el.image}></img>
+              <h3>{el.name}</h3>
+              <p>{el.price}</p>
             </div>
           ))}
         </div>

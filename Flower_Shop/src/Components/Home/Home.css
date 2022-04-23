@@ -23,12 +23,16 @@
     width: 85%;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(4,22%);
+    grid-template-columns: repeat(4,23%);
     gap: 2%;
+    margin-bottom: 300px;
 }
-
+.flower_div img {
+    height: 350px;
+}
 .potted_plants{
     width: 100%;
     margin: auto;
     margin-top: 40px;
+    margin-bottom: 50px;
 }

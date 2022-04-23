@@ -47,9 +47,9 @@ export const Potted_Plants = () => {
         <div className="potted_Plants_second">
           {pot.map((el) => (
             <div className="prductDetail_potted_Plants">
-                  <img src="">{ el.image}</img>
-                  <h3>{ el.name}</h3>
-                  <p>{ el.price}</p>
+              <img src={el.image}></img>
+              <h3>{el.name}</h3>
+              <p>{el.price}</p>
             </div>
           ))}
         </div>
