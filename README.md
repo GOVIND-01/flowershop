@@ -1,2 +1,2 @@
 # flowershop
-keep it simple pleaze
+keep it simple please
