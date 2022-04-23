@@ -222,7 +222,7 @@ export const CardPayment = () => {
                 }}
                 type="submit"
               >
-                PROCEED
+                BUY NOW
               </button>
             </Link>
           </form>

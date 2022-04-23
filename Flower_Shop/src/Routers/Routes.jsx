@@ -11,6 +11,7 @@ import Forgotpass from "../Components/sign-in/Forgotpass";
 import { PaymentPage } from "../Components/Payment/PaymentPage";
 import { CardPayment } from "../Components/Payment/CardPayment";
 import { ProductDetails } from "../Components/ProductDetails/ProductDetails";
+import { OrderPlaced } from "../Components/OrderDone/OrderDone";
 
 export const AllRoutes = () => {
     return (
@@ -26,7 +27,8 @@ export const AllRoutes = () => {
           <Route path="/potted-plant" element={<Potted_Plants/>} />
           <Route path="/payment" element={<PaymentPage/>} />
           <Route path="/card-payment" element={<CardPayment/>} />
-          <Route path="/product-details" element={<ProductDetails/>} />
+          <Route path="/product-details/:id" element={<ProductDetails/>} />
+          <Route path="/orderdone" element={<OrderPlaced/>} />
         </Routes>
         <Footer />
       </>

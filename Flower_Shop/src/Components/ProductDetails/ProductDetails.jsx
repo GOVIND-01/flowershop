@@ -8,24 +8,43 @@ import FormGroup from "@mui/material/FormGroup";
 import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
+import { useParams, useNavigate } from "react-router-dom";
+import axios from "axios";
+import {useState, useEffect} from "react";
+
 // import KeyboardDatePickerExample from './Calendar';
 // import Calendar from "react-calendar";
 
 export const ProductDetails = () => {
+
+  const navigate  = useNavigate();
+
   const [value, setValue] = React.useState("female");
+  const {id} = useParams();
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => getData(), [] );
+  // console.log('id: ', id);
 
   const handleChange = (event) => {
     setValue(event.target.value);
   };
 
+  const getData = () => {
+    axios.get(`https://storeflowersunil.herokuapp.com/flower/pot/${id}`).then((res)=>{
+      setData(res.data);
+    })
+  }
+
   return (
     <>
       <div className="product-container">
-        <h1>Flower Name</h1>
+        <h1>{data.name}</h1>
         <hr style={{ display: "flex", width: "90%" }} />
         <div style={{ display: "flex", width: "90%" }}>
           <img
-            src="https://assets.eflorist.com/site/EF-77/assets/products/PHR_/sku9960160.jpg"
+            src={data.image}
             alt=""
             style={{ margin: "auto" }}
           />
@@ -65,7 +84,7 @@ export const ProductDetails = () => {
               {/* <KeyboardDatePickerExample/> */}
               <h5>Use Address Book</h5>
               <Stack direction="row" spacing={2}>
-                <Button variant="contained">Add To Cart</Button>
+                <Button variant="contained" onClick={() => navigate(`/payment`)} >Checkout</Button>
               </Stack>
             </div>
           </div>
