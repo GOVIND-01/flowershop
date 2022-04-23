@@ -89,7 +89,7 @@ export function SignUpSide() {
             md={7}
             sx={{
               backgroundImage:
-                "url(https://cdn.pixabay.com/photo/2016/01/13/23/00/flowers-1139083__340.jpg)",
+                "url(https://floranext.com/wp-content/uploads/2021/09/pasted-image-0.png)",
               backgroundRepeat: "no-repeat",
               backgroundColor: (t) =>
                 t.palette.mode === "light"

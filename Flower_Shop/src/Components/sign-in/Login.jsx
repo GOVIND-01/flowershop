@@ -86,7 +86,7 @@ export function SignInSide() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: 'url(https://cdn.pixabay.com/photo/2016/01/13/23/00/flowers-1139083__340.jpg)',
+            backgroundImage: 'url(https://floranext.com/wp-content/uploads/2021/09/pasted-image-0.pngs)',
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
