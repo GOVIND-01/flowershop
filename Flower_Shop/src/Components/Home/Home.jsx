@@ -1,10 +1,14 @@
 import axios from "axios"
 import React, { useState,useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
+
+
 export const HomePage = () => {
     const [home, setHome] = useState([])
     
+    const navigate  = useNavigate();
+
     useEffect(() => {
         fetchHomedata();
     },[])
@@ -16,6 +20,13 @@ export const HomePage = () => {
             setHome([...res.data]);
         })
     }
+
+    // const navigateTo = (id) => {
+
+    //   console.log("ID", id)
+    // }
+    
+
     return (
       <div>
         <div className="Header"></div>
@@ -104,10 +115,11 @@ export const HomePage = () => {
               <p className="services">Weddings</p>
             </div>
           </div>
+
           <div className="flower_div">
             {home.map((el) => (
-              <div className="flower_div_first">
-                <img src={el.image}></img>
+              <div className="flower_div_first" onClick={() => navigate(`/product-details/${el._id}`)} >
+                <img src={el.image} />
                 <h3>{el.name}</h3>
                 <p>{el.price}</p>
               </div>
