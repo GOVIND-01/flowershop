@@ -1,0 +1,33 @@
+.logo_flower_shop{
+  width: 200px;
+  height: 150px;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  
+}
+.navbar_login{
+  margin-top: 40px;
+  margin-right: 40px;
+}
+.profile-drop-down-login{
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  
+}
+.navbar_input{
+  margin-top: 40px;
+}
+.input_nav{
+  padding: 15px;
+  font-size: 18px;
+  
+}
+.navbar_sign{
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(233, 10, 77);
+}

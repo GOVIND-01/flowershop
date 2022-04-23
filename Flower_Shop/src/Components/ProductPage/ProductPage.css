@@ -1,0 +1,16 @@
+.ProductPage_Main{
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+    text-align: left;
+}
+.ProductPage_first{
+    width: 30%;
+}
+.ProductPage_second{
+    width: 68%;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 2%;
+}

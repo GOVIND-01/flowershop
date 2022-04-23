@@ -1,0 +1,22 @@
+.potted_Plants_Main{
+    display: flex;
+    gap: 40px;
+    width: 90%;
+    margin: auto;
+    text-align: left;
+}
+.potted_Plants_first{
+    width: 25%;
+}
+.potted_Plants_second{
+    width: 68%;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 2%;
+}
+.priceSelect{
+    font-size: 20px;
+}
+.checkbox_price{
+    height: 15px;
+}
