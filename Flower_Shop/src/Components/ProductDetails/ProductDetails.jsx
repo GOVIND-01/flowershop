@@ -34,20 +34,22 @@ export const ProductDetails = () => {
   const getData = () => {
     axios.get(`https://storeflowersunil.herokuapp.com/flower/pot/${id}`).then((res)=>{
       setData(res.data);
-    })
-  }
+    });
+  };
 
   return (
     <>
       <div className="product-container">
-        <h1>{data.name}</h1>
+        <h1>Beach Gateway</h1>
+        <h4>Price : 600</h4>
         <hr style={{ display: "flex", width: "90%" }} />
         <div style={{ display: "flex", width: "90%" }}>
           <img
-            src={data.image}
+            src="https://assets.eflorist.com/site/EF-77/assets/products/PHR_/DE-804649-A.jpg?1557093015792"
             alt=""
-            style={{ margin: "auto" }}
+            style={{ margin: "auto", width: "450px" }}
           />
+          
           <hr />
           <div style={{ margin: "auto", width: "50%" }}>
             <FormControl>

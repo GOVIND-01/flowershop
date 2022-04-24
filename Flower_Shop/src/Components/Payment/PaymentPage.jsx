@@ -1,5 +1,6 @@
 import React from "react";
-import {CardPayment} from "./CardPayment";
+// import {CardPayment} from "./CardPayment";
+
 
 export const PaymentPage = () => {
   return (
