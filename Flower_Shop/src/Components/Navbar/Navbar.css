@@ -1,11 +1,21 @@
 .logo_flower_shop{
-  width: 200px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
+  border: 10px solid white;
+  border-bottom-color: rgb(233, 10, 77);;
+  border-top-color: rgb(233, 10, 77);;
+  box-shadow: .1px 1px 100px .01px greenyellow;
+  border-radius: 200px;
 }
 .navbar{
   display: flex;
-  justify-content: space-between;
+  background-color: whitesmoke;
+  height:150px;
   
+}
+.navbar>div{
+  width: 20%;
+  height: 100%;
 }
 .navbar_login{
   margin-top: 40px;
@@ -13,17 +23,34 @@
 }
 .profile-drop-down-login{
   display: flex;
-  justify-content: space-between;
   gap: 30px;
   
 }
 .navbar_input{
-  margin-top: 40px;
+  margin-top: 30px;
+  color: rgb(233, 10, 77);
 }
 .input_nav{
-  padding: 15px;
-  font-size: 18px;
+  padding-left: 100px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight:bold;
+  width:450px;
+  border-radius: 10px;
+  border: none;
+  color: rgb(233, 10, 77);
   
+}
+
+.fa-search{
+  position: absolute;
+  font-size: 25px;
+  left: 69%;
+  top: 45%;
+}
+.fa-search:hover{
+  cursor:pointer;
+  color:black;
 }
 .navbar_sign{
   text-decoration: none;

@@ -2,7 +2,7 @@ import axios from "axios"
 import React, { useState,useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
-
+import SimpleImageSlider from "react-simple-image-slider";
 
 export const HomePage = () => {
     const [home, setHome] = useState([])
@@ -10,9 +10,17 @@ export const HomePage = () => {
     const navigate  = useNavigate();
 
     useEffect(() => {
-        fetchHomedata();
+      fetchHomedata();
     },[])
-    
+
+    const images = [
+      { url: "" },
+      { url: "https://assets.eflorist.com/site/EF-77/assets/products/PHR_/sku9570382.jpg" },
+      { url: "https://assets.eflorist.com/assets/products/PHR_/TRS04-1A.jpg" },
+      { url: "https://assets.eflorist.com/assets/products/PHR_/T271-3A.jpg" },
+      { url: "https://assets.eflorist.com/site/EF-77/assets/products/PHR_/sku6960213.jpg" },
+      { url: "https://assets.eflorist.com/assets/products/PHR_/TRS03-1A.jpg" },
+    ];
     let home_url = "https://storeflowersunil.herokuapp.com/flower/homepage";
     const fetchHomedata = () => {
         axios.get(home_url).then((res) => {
@@ -21,11 +29,12 @@ export const HomePage = () => {
         })
     }
 
-    // const navigateTo = (id) => {
-
-    //   console.log("ID", id)
-    // }
-    
+    // const ids = setInterval(() => {
+    //   if(i==sliderArr.length){
+    //     seti(0);
+    //   }
+    //   seti(i+1);
+    // }, 1000)
 
     return (
       <div>
@@ -33,59 +42,14 @@ export const HomePage = () => {
         <h1>Flower Store</h1>
         <div className="flower_Main">
           <div className="flower_home_slider">
-            <div
-              id="carouselExampleControls"
-              class="carousel slide"
-              data-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    class="d-block w-100"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqiwa0S35Erm3_C_sNVKv9BstnqakzmdcbEQ&usqp=CAU"
-                    alt="First slide"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    class="d-block w-100"
-                    src="https://static.pexels.com/photos/36753/flower-purple-lical-blosso.jpg"
-                    alt="Second slide"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    class="d-block w-100"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxIJos8rniuKLk_9hKz9u6z-UOQW6traD9Lg&usqp=CAU"
-                    alt="Third slide"
-                  />
-                </div>
-              </div>
-              <a
-                class="carousel-control-prev"
-                href="#carouselExampleControls"
-                role="button"
-                data-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a
-                class="carousel-control-next"
-                href="#carouselExampleControls"
-                role="button"
-                data-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
+          <SimpleImageSlider
+        width={1250}
+        height={200}
+        images={images}
+        showBullets={true}
+        showNavs={true}
+        autoPlay={true}
+      />
           </div>
           <div className="flower_home_about">
             <div className="flower_home_corprate_service">

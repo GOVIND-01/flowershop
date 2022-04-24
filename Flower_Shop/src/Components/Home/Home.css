@@ -9,6 +9,16 @@
     justify-content: space-around;
     margin-top: 40px;
 }
+.flower_home_slider{
+    height: 200px;
+    width:90%;
+    margin-left:5%;
+
+}
+.flower_home_slider>img{
+    width: 100%;
+    height: 100%;
+}
 
 .services{
     font-size: 20px;
