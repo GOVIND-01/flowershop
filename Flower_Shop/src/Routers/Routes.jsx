@@ -12,6 +12,7 @@ import { PaymentPage } from "../Components/Payment/PaymentPage";
 import { CardPayment } from "../Components/Payment/CardPayment";
 import { ProductDetails } from "../Components/ProductDetails/ProductDetails";
 import { OrderPlaced } from "../Components/OrderDone/OrderDone";
+import { ProductDetailsHome } from "../Components/ProductDetails/ProductDetailsHome";
 
 export const AllRoutes = () => {
     return (
@@ -28,6 +29,7 @@ export const AllRoutes = () => {
           <Route path="/payment" element={<PaymentPage/>} />
           <Route path="/card-payment" element={<CardPayment/>} />
           <Route path="/product-details/:id" element={<ProductDetails/>} />
+          <Route path="/product-details/home/:id" element={<ProductDetailsHome/>} />
           <Route path="/orderdone" element={<OrderPlaced/>} />
         </Routes>
         <Footer />

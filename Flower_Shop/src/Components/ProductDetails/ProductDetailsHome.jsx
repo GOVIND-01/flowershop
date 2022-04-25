@@ -15,7 +15,7 @@ import {useState, useEffect} from "react";
 // import KeyboardDatePickerExample from './Calendar';
 // import Calendar from "react-calendar";
 
-export const ProductDetails = () => {
+export const ProductDetailsHome = () => {
 
   const navigate  = useNavigate();
 
@@ -32,7 +32,7 @@ export const ProductDetails = () => {
   };
 
   const getData = () => {
-    axios.get(`https://storeflowersunil.herokuapp.com/flower/pot/${id}`).then((res)=>{
+    axios.get(`https://storeflowersunil.herokuapp.com/flower/homepage/${id}`).then((res)=>{
       setData(res.data);
       // console.log(res.data);
     });
