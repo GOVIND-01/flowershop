@@ -10,10 +10,12 @@
     margin-top: 40px;
 }
 .flower_home_slider{
+   
     height: 350px;
-    width:90%;
-    margin-left:5%;
-
+    width:100%;
+    margin-left: 140px;
+    
+   
 }
 .flower_home_slider>img{
     width: 100%;

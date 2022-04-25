@@ -32,7 +32,7 @@ export const HomePage = () => {
     return (
       <div>
         <div className="Header"></div>
-        <h1>Flower Store</h1>
+    
         <div className="flower_Main">
           <div className="flower_home_slider">
           <SimpleImageSlider
